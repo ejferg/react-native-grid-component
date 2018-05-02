@@ -134,6 +134,7 @@ export default class Grid extends Component {
       itemsPerRow,
       itemHasChanged,
       data,
+      listViewRef,
       sections,
       ...props
     } = this.props;
@@ -142,6 +143,7 @@ export default class Grid extends Component {
       <View style={styles.container}>
         <ListView
           {...props}
+          ref={listViewRef}
           style={styles.list}
           dataSource={this.state.dataSource}
           renderRow={this._renderRow}
